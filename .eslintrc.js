@@ -45,7 +45,8 @@ module.exports = {
     ],
     'max-len': ['error', { ignoreComments: true, code: 100 }],
     'react/prop-types': [1],
-    'react/display-name': [0]
+    'react/display-name': [0],
+    '@typescript-eslint/no-var-requires': 0
   },
 
   globals: {

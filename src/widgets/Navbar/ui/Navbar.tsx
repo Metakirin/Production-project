@@ -15,12 +15,7 @@ export const Navbar: React.FC<NavbarProps> = (props) => {
   return (
     <div className={classNames(cls.navbar, {}, [className])}>
       <div className={cls.links}></div>
-      <AppLink theme={AppLinkTheme.INVERTED} to={'/'} className={cls.mainlink}>
-        {t('Main Page')}
-      </AppLink>
-      <AppLink theme={AppLinkTheme.INVERTED} to={'/about'}>
-        {t('About us')}
-      </AppLink>
+      {}
     </div>
   )
 }
