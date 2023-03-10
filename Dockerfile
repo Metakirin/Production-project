@@ -1,6 +1,6 @@
 FROM node:17.4.0
 WORKDIR /app
-COPY . .
+COPY . /app
 RUN npm install
-CMD ["npm", "start"]
+CMD ["npm", "run", "start"]
 EXPOSE 3000

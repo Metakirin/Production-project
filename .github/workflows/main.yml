@@ -1,5 +1,6 @@
 name: linting, testing, building
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+
 on:
   push:
     branches: [main]
@@ -37,5 +38,11 @@ jobs:
         if: always()
         run: npm run storybook:build
       - name: screenshot testing
-        run: npm run test:ui:ci
         if: always()
+        uses: addnab/docker-run-action@v3
+        with:
+          image: prodproj:latest
+          options: -v ${{ github.workspace }}:/var/www
+          run: |
+            composer install
+            npm run test:ui:ci
