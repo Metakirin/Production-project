@@ -39,10 +39,4 @@ jobs:
         run: npm run storybook:build
       - name: screenshot testing
         if: always()
-        uses: addnab/docker-run-action@v3
-        with:
-          image: prodproj:latest
-          options: -v ${{ github.workspace }}:/var/www
-          run: |
-            composer install
-            npm run test:ui:ci
+        run: npm run test:ui:ci
