@@ -39,9 +39,7 @@ jobs:
         run: npm run storybook:build
       - name: screenshot testing
         if: always()
-        uses: |
-          actions/javascript-action@v1 
-          addnab/docker-run-action@v3
+        uses: actions/javascript-action@v1
         with:
           image: prodproj:latest
           options: -v ${{ github.workspace }}:/var/www
