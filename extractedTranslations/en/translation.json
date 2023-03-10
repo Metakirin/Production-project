@@ -1,11 +1,15 @@
 {
   "About us": "",
+  "Decrement": "",
+  "Incrememnt": "",
   "Lang": "Lang",
   "Main Page": "",
   "Not found": "Not found",
+  "Password": "Password",
   "Reload page": "Reload page",
   "Sign In": "Sign In",
   "Something went wrong": "Something went wrong",
   "Throw error": "Throw error",
+  "Username": "Username",
   "toggle": ""
 }

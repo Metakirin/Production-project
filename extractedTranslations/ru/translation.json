@@ -1,10 +1,14 @@
 {
   "About us": "About us",
+  "Decrement": "Decrement",
+  "Incrememnt": "Incrememnt",
   "Lang": "Lang",
   "Main Page": "Main Page",
   "Not found": "Not found",
+  "Password": "Password",
   "Reload page": "Reload page",
   "Sign In": "Sign In",
   "Something went wrong": "Something went wrong",
-  "Throw error": "Throw error"
+  "Throw error": "Throw error",
+  "Username": "Username"
 }

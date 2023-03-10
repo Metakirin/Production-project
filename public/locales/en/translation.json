@@ -11,5 +11,9 @@
   "Throw error": "Throw error",
   "toggle": "toggle",
   "Sign In": "Sign In",
-  "Sign Up": "Sign Up"
+  "Sign Up": "Sign Up",
+  "Incrememnt": "Increment",
+  "Decrement": "Decrement",
+  "Username": "Username",
+  "Password": "Password"
 }

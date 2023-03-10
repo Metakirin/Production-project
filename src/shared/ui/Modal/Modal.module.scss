@@ -23,13 +23,7 @@
   transition: 0.3s transform;
   transform: scale(0.5);
   max-width: 60%;
-  color: var(--inverted-primary-color);
-  background-color: var(--inverted-bg-color);
-}
-
-.content.dark {
-  color: var(--primary-color);
-  background-color: var(--bg-color);
+  background: var(--bg-color);
 }
 
 .opened {
