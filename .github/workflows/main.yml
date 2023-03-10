@@ -10,7 +10,7 @@ jobs:
   pipeline:
     strategy:
       matrix:
-        os: [windows-latest]
+        os: [ubuntu-latest]
         node-version: [17.x]
     runs-on: ${{ matrix.os }}
 
@@ -39,6 +39,10 @@ jobs:
         run: npm run storybook:build
       - name: screenshot testing
         if: always()
-        run: |
-          docker build -t propproj .
-          npm run test:ui:ci
+        uses: actions/javascript-action@v1
+        with:
+          image: prodproj:latest
+          options: -v ${{ github.workspace }}:/var/www
+          run: |
+            composer install
+            npm run test:ui:ci
