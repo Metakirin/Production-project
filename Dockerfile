@@ -1,4 +1,4 @@
-FROM node:17.x
+FROM node:17.4.0
 WORKDIR /app
 COPY . .
 RUN npm install
