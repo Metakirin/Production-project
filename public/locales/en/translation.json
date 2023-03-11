@@ -15,5 +15,8 @@
   "Incrememnt": "Increment",
   "Decrement": "Decrement",
   "Username": "Username",
-  "Password": "Password"
+  "Password": "Password",
+  "Authorization form": "Authorization form",
+  "AuthError": "Incorrect username or password",
+  "Sign Out": "Sign out"
 }

@@ -43,7 +43,7 @@ module.exports = {
       'error',
       { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] }
     ],
-    'max-len': ['error', { ignoreComments: true, code: 100 }],
+    'max-len': ['error', { ignoreComments: true, code: 120 }],
     'react/prop-types': [1],
     'react/display-name': [0],
     '@typescript-eslint/no-var-requires': 0,

@@ -1,5 +1,7 @@
 {
   "About us": "",
+  "AuthError": "",
+  "Authorization form": "",
   "Decrement": "",
   "Incrememnt": "",
   "Lang": "Lang",
@@ -8,6 +10,7 @@
   "Password": "Password",
   "Reload page": "Reload page",
   "Sign In": "Sign In",
+  "Sign Out": "",
   "Something went wrong": "Something went wrong",
   "Throw error": "Throw error",
   "Username": "Username",
