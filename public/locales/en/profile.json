@@ -1,0 +1,19 @@
+{
+  "Profile": "Profile",
+  "Edit": "Edit",
+  "First name": "First name",
+  "Last name": "Last name",
+  "ErrProf": "Occured error while loading profile",
+  "ErrRel": "Try to reload page",
+  "Cancel": "Cancel",
+  "Save": "Save",
+  "Age": "Age",
+  "City": "City",
+  "Avatar": "Link to avatar",
+  "Country": "Country",
+  "Server error": "Server error",
+  "No data found": "No data found",
+  "First and last name are required": "First and last name are required",
+  "Invalid age": "Invalid age",
+  "Invalid country": "Invalid country"
+}

@@ -18,5 +18,7 @@
   "Password": "Password",
   "Authorization form": "Authorization form",
   "AuthError": "Incorrect username or password",
-  "Sign Out": "Sign out"
+  "Sign Out": "Sign out",
+  "Profile Page": "Profile Page",
+  "Currency": "Currency"
 }
