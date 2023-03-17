@@ -1,12 +1,9 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
 import { ProfileCard } from './ProfileCard'
 import { Currency } from 'entities/Currency'
 import { Country } from 'entities/Country'
-import AvatarImg from 'shared/assets/tests/angel.jpg'
-import { url } from 'inspector'
 
 export default {
   title: 'entities/ProfileCard',
@@ -30,7 +27,8 @@ Primary.args = {
     country: Country.USA,
     city: 'New York',
     username: 'admin',
-    avatar: AvatarImg
+    avatar:
+      'https://i.pinimg.com/564x/fd/ee/49/fdee4934d6680ca4bac85dd0c15ca39a.jpg'
   }
 }
 Primary.decorators = []
