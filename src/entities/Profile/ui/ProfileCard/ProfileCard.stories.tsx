@@ -5,7 +5,8 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDeco
 import { ProfileCard } from './ProfileCard'
 import { Currency } from 'entities/Currency'
 import { Country } from 'entities/Country'
-import avatar from 'shared/assets/tests/angel.jpg'
+import AvatarImg from 'shared/assets/tests/angel.jpg'
+import { url } from 'inspector'
 
 export default {
   title: 'entities/ProfileCard',
@@ -29,7 +30,7 @@ Primary.args = {
     country: Country.USA,
     city: 'New York',
     username: 'admin',
-    avatar: avatar
+    avatar: AvatarImg
   }
 }
 Primary.decorators = []
