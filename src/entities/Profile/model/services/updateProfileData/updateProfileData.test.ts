@@ -11,7 +11,8 @@ const data = {
   currency: Currency.USD,
   country: Country.USA,
   city: 'New York',
-  username: 'admin'
+  username: 'admin',
+  id: '1'
 }
 
 describe('updateProfileData.test', () => {

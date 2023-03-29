@@ -20,5 +20,8 @@
   "AuthError": "Incorrect username or password",
   "Sign Out": "Sign out",
   "Profile Page": "Profile Page",
-  "Currency": "Currency"
+  "Currency": "Currency",
+  "No comments": "No comments",
+  "Write comment": "Write comment",
+  "Send": "Send"
 }

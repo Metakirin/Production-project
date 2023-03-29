@@ -111,7 +111,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
         />
         <Input
           value={data?.username}
-          placeholder={t('Username')}
+          placeholder={t('Username', { ns: 'translation' })}
           className={cls.input}
           readOnly={readOnly}
           onChange={onChangeUsername}

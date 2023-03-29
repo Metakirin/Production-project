@@ -2,6 +2,7 @@
 @import "variables/global";
 @import "themes/normal";
 @import "themes/dark";
+@import "themes/sakura";
 
 body {
   font: var(--font-m);
@@ -19,5 +20,8 @@ body {
 
 .page-wrapper {
   flex-grow: 1;
-  padding: 20px;
+  padding: 20px 20px 20px 45px;
+  height: calc(100vh - var(--navbar-height));
+  overflow-y: auto;
+  flex-shrink: 100;
 }

@@ -1,8 +1,10 @@
 import webpack from 'webpack'
 import { BuildOptions } from './types/config'
 import { buildCssLoader } from './loaders/buildCssLoader'
+import { buildBabelLoader } from './loaders/buildBabelLoader'
 
-export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
+export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
+  const { isDev } = options
   const svgLoader = {
     test: /\.svg$/,
     use: ['@svgr/webpack']
@@ -19,25 +21,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
 
   const cssLoader = buildCssLoader(isDev)
 
-  const babelLoader = {
-    test: /\.(js|jsx|ts|tsx)$/,
-    exclude: /node_modules/,
-    use: {
-      loader: 'babel-loader',
-      options: {
-        presets: ['@babel/preset-env'],
-        plugins: [
-          [
-            'i18next-extract',
-            {
-              locales: ['en', 'ru'],
-              keyAsDefaultValue: true
-            }
-          ]
-        ]
-      }
-    }
-  }
+  const babelLoader = buildBabelLoader(options)
 
   // Если не используем тайпскрипт - нужен babel-loader
   const typescriptLoader = {
