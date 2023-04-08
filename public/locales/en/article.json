@@ -1,5 +1,9 @@
 {
   "Article is not found": "Article is not found",
   "ErrArt": "Occured error while loading article",
-  "Comments": "Comments"
+  "Comments": "Comments",
+  "ALL": "all",
+  "IT": "IT",
+  "SCIENCE": "science",
+  "ECONOMMICS": "economics"
 }

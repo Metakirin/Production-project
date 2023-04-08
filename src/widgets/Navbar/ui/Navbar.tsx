@@ -6,6 +6,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Button, ThemeButton } from 'shared/ui/Button/Button'
 import cls from './Navbar.module.scss'
+import { Text, TextTheme } from 'shared/ui/Text/Text'
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
+import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 
 interface NavbarProps {
   className?: string
@@ -31,7 +34,19 @@ export const Navbar: React.FC<NavbarProps> = memo((props) => {
 
   if (authData) {
     return (
-      <div className={classNames(cls.navbar, {}, [className])}>
+      <header className={classNames(cls.navbar, {}, [className])}>
+        <Text
+          className={cls.appName}
+          title={t('TK Blog')}
+          theme={TextTheme.INVERTED}
+        />
+        <AppLink
+          to={RoutePath.article_create}
+          theme={AppLinkTheme.INVERTED}
+          className={cls.createBtn}
+        >
+          {t('New article')}
+        </AppLink>
         <Button
           theme={ThemeButton.CLEAR_INVERTED}
           className={cls.links}
@@ -39,12 +54,12 @@ export const Navbar: React.FC<NavbarProps> = memo((props) => {
         >
           {t('Sign Out')}
         </Button>
-      </div>
+      </header>
     )
   }
 
   return (
-    <div className={classNames(cls.navbar, {}, [className])}>
+    <header className={classNames(cls.navbar, {}, [className])}>
       <Button
         theme={ThemeButton.CLEAR_INVERTED}
         className={cls.links}
@@ -54,6 +69,6 @@ export const Navbar: React.FC<NavbarProps> = memo((props) => {
       </Button>
 
       <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
-    </div>
+    </header>
   )
 })

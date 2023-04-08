@@ -8,7 +8,9 @@ export default ({ config }: { config: Configuration }) => {
     build: '',
     entry: '',
     html: '',
-    src: path.resolve(__dirname, '..', '..', 'src')
+    src: path.resolve(__dirname, '..', '..', 'src'),
+    locales: '',
+    buildLocales: ''
   }
   config.resolve?.modules?.push(paths.src)
   config.resolve?.extensions?.push('.tsx', '.ts')

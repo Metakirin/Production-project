@@ -10,20 +10,22 @@ import { CounterSchema } from 'entities/Counter'
 import { ProfileSchema } from 'entities/Profile'
 import { UserSchema } from 'entities/User'
 import { LoginSchema } from 'features/AuthByUserName'
-import { NavigateOptions } from 'react-router'
-import { To } from 'history'
 import { ArticleDetailsSchema } from 'entities/Article'
-import { ArticleDetailsCommentSchema } from 'pages/ArticlesDetailsPage'
 import { AddCommentFormSchema } from 'features/AddCommentForm'
+import { ArticlesPageSchema } from 'pages/ArticlesPage'
+import { ScrollSaveSchema } from 'features/ScrollSave'
+import { ArticleDetailsPageSchema } from 'pages/ArticlesDetailsPage'
 
 export interface StateSchema {
   counter: CounterSchema
   user: UserSchema
+  scrollSave: ScrollSaveSchema
   loginForm?: LoginSchema
   profile?: ProfileSchema
   articleDetails?: ArticleDetailsSchema
-  articleDetailsComments?: ArticleDetailsCommentSchema
+  articleDetailsPage?: ArticleDetailsPageSchema
   addCommentForm?: AddCommentFormSchema
+  articlesPage?: ArticlesPageSchema
 }
 
 export type StateSchemaKey = keyof StateSchema
@@ -41,7 +43,6 @@ export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {
 
 export interface ThunkExtraArg {
   api: AxiosInstance
-  navigate?: (to: To, options?: NavigateOptions) => void
 }
 
 export interface ThunkConfig<T> {

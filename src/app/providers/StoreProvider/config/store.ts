@@ -15,8 +15,7 @@ import { loginByUsername } from 'features/AuthByUserName/model/services/loginByU
 import { USER_LOCALSTORAGE_KEY } from 'shared/consts/localstorage'
 import { createReducerManager } from './reducerManager'
 import { $api } from 'shared/api/api'
-import { NavigateOptions } from 'react-router'
-import { To } from 'history'
+import { ScrollSaveReducer } from 'features/ScrollSave'
 
 interface Store {
   dispatch: Dispatch
@@ -46,20 +45,19 @@ const authMiddleware =
 
 export function createReduxStore(
   initialState?: StateSchema,
-  asyncReducers?: ReducersMapObject<StateSchema>,
-  navigate?: (to: To, options?: NavigateOptions) => void
+  asyncReducers?: ReducersMapObject<StateSchema>
 ) {
   const rootReducers: ReducersMapObject<StateSchema> = {
     ...asyncReducers,
     counter: counterReducer,
-    user: userReducer
+    user: userReducer,
+    scrollSave: ScrollSaveReducer
   }
 
   const reducerManager = createReducerManager(rootReducers)
 
   const extraArg: ThunkExtraArg = {
-    api: $api,
-    navigate
+    api: $api
   }
 
   const store = configureStore({
