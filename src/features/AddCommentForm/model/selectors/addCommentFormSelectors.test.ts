@@ -4,7 +4,7 @@ import {
   getAddCommentFormText
 } from './addCommentFormSelectors'
 
-describe('getLoginError.test', () => {
+describe('addCommentFormSelectors.test', () => {
   test('should return text', () => {
     const state: DeepPartial<StateSchema> = {
       addCommentForm: { text: '123' }
@@ -21,6 +21,6 @@ describe('getLoginError.test', () => {
 
   test('should work with empy state', () => {
     const state: DeepPartial<StateSchema> = {}
-    expect(getAddCommentFormText(state as StateSchema)).toEqual(undefined)
+    expect(getAddCommentFormText(state as StateSchema)).toEqual('')
   })
 })

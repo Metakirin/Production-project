@@ -3,7 +3,7 @@ import { ArticleDetailsPageHeader } from './ArticleDetailsPageHeader'
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
 
 export default {
-  title: 'shared/ArticleDetailsPageHeader',
+  title: 'pages/ArticleDetailsPageHeader',
   component: ArticleDetailsPageHeader,
   argTypes: {
     backgroundColor: { control: 'color' }
@@ -16,4 +16,4 @@ const Template: ComponentStory<typeof ArticleDetailsPageHeader> = (args) => (
 
 export const Normal = Template.bind({})
 Normal.args = {}
-Normal.decorators = [StoreDecorator({ scrollSave: { scroll: { '1': 1 } } })]
+Normal.decorators = [StoreDecorator({})]

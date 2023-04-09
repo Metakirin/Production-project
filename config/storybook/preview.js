@@ -18,4 +18,3 @@ export const parameters = {
 addDecorator(StyleDecorator)
 addDecorator(ThemeDecorator(Theme.LIGHT))
 addDecorator(RouterDecorator)
-addDecorator(StoreDecorator({ scrollSave: { scroll: { 1: 1 } } }))
